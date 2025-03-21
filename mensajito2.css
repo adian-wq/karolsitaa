@@ -1,0 +1,72 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image-rotator {
+    position: relative;
+    margin-bottom: 20px;
+    height: 600px; /* Altura ajustable según las imágenes */
+    width: 600px;
+    overflow: hidden;
+  }
+
+  .image-rotator img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20%; /* Asegura que la imagen ocupe como mínimo el ancho del contenedor */
+    min-height: 20%; /* Asegura que la imagen ocupe como mínimo la altura del contenedor */
+    width: auto;
+    height: auto;
+    max-width: none; /* Importante: permite que la imagen pueda ser más ancha que su tamaño natural */
+    max-height: none; /* Importante: permite que la imagen pueda ser más alta que su tamaño natural */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .image-rotator img.active {
+    opacity: 1;
+  }
+  
+  .message-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+  
+  .audio-player {
+    margin-bottom: 2rem;
+  }
+  
+  audio {
+    width: 100%;
+  }
+  
+  .back-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .back-link:hover {
+    background-color: #fff;
+    color: #000;
+  }
